@@ -10,7 +10,7 @@ class BurdsController < ApplicationController
   additions that I will build to reverse engineer this
   lab's functionality so I can figure out what the
   hell is goin on here...it's much easier to reverse
-  engineer these things that to try and read the test
+  engineer these things than to try and read the test
   errors and figure it out that way.
 
   After I understand this crap I'll go in and build some
