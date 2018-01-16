@@ -6,8 +6,7 @@
     <form action="burd/owners" method="POST">
       <label>new pet</label>
       <input type="text" name="pet[name]" />
-      <input type="submit" />
-    </form>
+
   <% else %>
     <br><h2><%= person.name %></h2>
     <ul>
@@ -17,3 +16,6 @@
     </ul>
   <% end %>
 <% end %>
+
+<input type="submit" />
+</form>
