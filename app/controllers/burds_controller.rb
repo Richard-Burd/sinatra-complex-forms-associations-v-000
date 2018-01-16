@@ -17,48 +17,48 @@ class BurdsController < ApplicationController
   tests so I get how those work too!
 =end
 
-    get '/burd' do
-      @var = Owner.all
-  #   raise @var.inspect
-      erb :'/owners/burd_1'
-    end
+  get '/burd' do
+    @var = Owner.all
+#   raise @var.inspect
+    erb :'/owners/burd_1'
+  end
 
-    get '/burd/chamber' do
-      redirect to '/burd'
-    end
+  get '/burd/chamber' do
+    redirect to '/burd'
+  end
 
-    post '/burd/chamber' do
-  #   raise params.inspect
-      erb :'/owners/burd_2'
-    end
+  post '/burd/chamber' do
+#   raise params.inspect
+    erb :'/owners/burd_2'
+  end
 
-    post '/burd/life' do
-  #   raise params.inspect
-      if params["Box 1"] == "on"
-        redirect 'burd/etzhayim'
-      else
-        "You're dead guy! :("
-      end
+  post '/burd/life' do
+#   raise params.inspect
+    if params["Box 1"] == "on"
+      redirect 'burd/etzhayim'
+    else
+      "You're dead guy! :("
     end
+  end
 
-    post "/burd/owners" do
-  #    raise params.inspect
-  #   => {"owner" => {"name" => "Maximus"}, "pet" => {"name" => "Garfield"}}
-      @baal = Owner.create(params[:owner])
-      if !params["pet"]["name"].empty?
-  #     @baal.pets << Pet.create(name: params["pet"]["name"])
-        @baal.pets << Pet.create(params[:pet])
-      end
-      @baal.save
-      redirect "owners/#{@baal.id}"
+  post "/burd/owners" do
+#    raise params.inspect
+#   => {"owner" => {"name" => "Maximus"}, "pet" => {"name" => "Garfield"}}
+    @baal = Owner.create(params[:owner])
+    if !params["pet"]["name"].empty?
+  #   @baal.pets << Pet.create(name: params["pet"]["name"])
+      @baal.pets << Pet.create(params[:pet])
     end
+    @baal.save
+    redirect "owners/#{@baal.id}"
+  end
 
-    get '/burd/etzhayim' do
-      erb :'/owners/burd_3'
-    end
+  get '/burd/etzhayim' do
+    erb :'/owners/burd_3'
+  end
 
-    get '/burd/owners' do
-      erb :'/owners/burd_4'
-    end
+  get '/burd/owners' do
+    erb :'/owners/burd_4'
+  end
 
 end
