@@ -9,6 +9,10 @@
 
   <% else %>
     <br><h2><%= person.name %></h2>
+
+    <label>new pet</label>
+    <input type="text" name="pet[name]" />
+    
     <ul>
       <% person.pets.each do |petname| %>
         <li><%= petname.name %></li>
