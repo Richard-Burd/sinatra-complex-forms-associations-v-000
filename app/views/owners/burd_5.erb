@@ -1,5 +1,5 @@
 <h1>Here are all the Owners and their Pets</h1>
-
+<h2>Go ahead and add a pet to any of the Owners</h2>
 <% Owner.all.each do |person| %>
   <% if person.pets.empty? %>
     <br><h2><%= person.name + " has no pets." %></h2>
