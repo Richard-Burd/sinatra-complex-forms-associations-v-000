@@ -6,13 +6,10 @@
     <form action="burd/owners" method="POST">
       <label>new pet</label>
       <input type="text" name="pet[name]" />
-
-  <% else %>
-    <br><h2><%= person.name %></h2>
-
       <input type="submit" />
     </form>
-
+  <% else %>
+    <br><h2><%= person.name %></h2>
     <ul>
       <% person.pets.each do |petname| %>
         <li><%= petname.name %></li>
