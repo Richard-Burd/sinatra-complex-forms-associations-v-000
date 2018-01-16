@@ -4,7 +4,6 @@ just pass this page's hash to the '/burd/owners' controller because that
 controller assumes we're editing the *last* owner, and not one of the owners
 that is in the middle of the list somewhere.  Getting this page to work
 properly may need to involve Javascript but I dunno yet.
-
 </h3>
 
 
@@ -12,7 +11,7 @@ properly may need to involve Javascript but I dunno yet.
 <h2>Go ahead and add a pet to any of the Owners</h2>
 <% Owner.all.each do |person| %>
   <% if person.pets.empty? %>
-    <br><h2><%= person.name + " has no pets." %></h2>
+    <br><h2><%= person.name %> <%= " has no pets." %></h2>
     <form action="/burd/owners" method="POST">
       <label>new pet</label>
       <input type="text" name="pet[name]" />
