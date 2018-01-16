@@ -1,0 +1,3 @@
+class BurdsController < ApplicationController
+
+end 
