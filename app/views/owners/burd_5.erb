@@ -3,7 +3,7 @@
 <% Owner.all.each do |person| %>
   <% if person.pets.empty? %>
     <br><h2><%= person.name + " has no pets." %></h2>
-    <form action="burd/owners" method="POST">
+    <form action="/burd/owners" method="POST">
       <label>new pet</label>
       <input type="text" name="pet[name]" />
 
