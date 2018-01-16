@@ -62,6 +62,7 @@ class BurdsController < ApplicationController
   end
 
   get '/burd/owners' do
+    raise params.inspect
     erb :'/owners/burd_4'
   end
 
