@@ -15,6 +15,10 @@ class BurdsController < ApplicationController
 
   After I understand this crap I'll go in and build some
   tests so I get how those work too!
+
+  After that I'll break some stuff & see how the tests
+  respond so I get an idea of what errors the tests are
+  trying to point out.
 =end
 
   get '/burd' do
