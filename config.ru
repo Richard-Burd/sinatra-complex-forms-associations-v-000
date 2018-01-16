@@ -9,7 +9,7 @@ end
 #  string_class_name = file.split('_').collect { |w| w.capitalize }.join
 #  class_name = Object.const_get(string_class_name)
 #  use class_name
-end
+#end
 use Rack::MethodOverride
 use OwnersController
 use PetsController
