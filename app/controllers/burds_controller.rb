@@ -65,8 +65,8 @@ class BurdsController < ApplicationController
     erb :'/owners/burd_4'
   end
 
-  get '/burd/addowners' do 
-
-  end 
+  get '/burd/addowners' do
+    erb :'/owners/burd_5'
+  end
 
 end
