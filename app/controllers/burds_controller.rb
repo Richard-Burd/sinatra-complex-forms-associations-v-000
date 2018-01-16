@@ -1,6 +1,6 @@
 class BurdsController < ApplicationController
 
-  =begin
+=begin
   So i went ahead & copied another student's answers for
   this lab since the "solution" branch on Learn.co's
   GitHub account doesn't pass all the tests.  So much
@@ -15,7 +15,7 @@ class BurdsController < ApplicationController
 
   After I understand this crap I'll go in and build some
   tests so I get how those work too!
-  =end
+=end
 
     get '/burd' do
       @var = Owner.all
@@ -61,4 +61,4 @@ class BurdsController < ApplicationController
       erb :'/owners/burd_4'
     end
 
-end 
+end
